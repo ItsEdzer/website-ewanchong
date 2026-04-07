@@ -162,6 +162,34 @@ nav a:hover {
 
 
 
+/* Section Styles */
+section {
+    padding: 6rem 4rem;
+    position: relative;
+}
+
+.section-header {
+    margin-bottom: 4rem;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.section-label {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.section-title {
+    font-family: var(--serif);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+
 /* About Section */
 .about-content {
     display: grid;
@@ -208,7 +236,76 @@ nav a:hover {
 
 
 /* Work Section */
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
 
+.work-item {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    background: white;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    animation-fill-mode: backwards;
+}
+
+.work-item:nth-child(1) { animation-delay: 0.1s; }
+.work-item:nth-child(2) { animation-delay: 0.2s; }
+.work-item:nth-child(3) { animation-delay: 0.3s; }
+.work-item:nth-child(4) { animation-delay: 0.4s; }
+
+.work-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.work-image {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(135deg, #f5f5f3, #e8e7e0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+    transition: background 0.4s ease;
+}
+
+.work-item:hover .work-image {
+    background: linear-gradient(135deg, var(--color-accent), #d97746);
+    color: white;
+}
+
+.work-content {
+    padding: 2rem;
+}
+
+.work-title {
+    font-family: var(--serif);
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.work-category {
+    font-size: 0.9rem;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.work-description {
+    color: var(--color-secondary);
+    line-height: 1.7;
+    font-weight: 300;
+}
 
 
 
