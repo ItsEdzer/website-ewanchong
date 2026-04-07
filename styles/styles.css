@@ -58,7 +58,7 @@ nav {
     letter-spacing: -0.5px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 2rem;
 }
 
 .profile-pic {
@@ -359,6 +359,7 @@ section {
 
 .social-link {
     color: var(--color-text);
+    position: relative;
     text-decoration: none;
     font-size: 1rem;
     letter-spacing: 1px;
