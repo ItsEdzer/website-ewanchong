@@ -28,11 +28,12 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    padding: 2rem 4rem;
+    padding: 1.5rem 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(250, 250, 248, 0.95);
+    /* background: rgba(250, 250, 248, 0.95); */
+    background: rgba(200, 200, 225, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--color-border);
     z-index: 1000;
@@ -190,6 +191,7 @@ section {
 }
 
 
+
 /* About Section */
 .about-content {
     display: grid;
@@ -231,7 +233,6 @@ section {
     color: white;
     border-color: var(--color-accent);
 }
-
 
 
 
@@ -309,8 +310,6 @@ section {
 
 
 
-
-
 /* Contact Section */
 .contact-content {
     text-align: center;
@@ -356,15 +355,30 @@ section {
     transition: color 0.3s ease;
 }
 
+.social-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--color-accent);
+    transition: width 0.3s ease;
+}
+
 .social-link:hover {
     color: var(--color-accent);
 }
 
+.social-link:hover::after {
+    width: 100%;
+}
 
 
 /* Footer Section */
 footer {
-    padding: 3rem 4rem;
+    padding: 1.5rem 4rem;
+    background: rgba(200, 200, 225, 0.95);
     border-top: 1px solid var(--color-border);
     text-align: center;
     color: var(--color-secondary);
