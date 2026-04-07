@@ -32,9 +32,9 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background: rgba(250, 250, 248, 0.95); */
-    background: rgba(225, 225, 235, 0.95);
-    backdrop-filter: blur(10px);
+    background: rgba(250, 250, 248, 0.95);
+    /* background: rgba(225, 225, 235, 0.95); */
+    backdrop-filter: blur(5px);
     border-bottom: 1px solid var(--color-border);
     z-index: 1000;
     animation: slideDown 0.8s cubic-bezier(0.16, 1, 0.3, 1);
@@ -51,15 +51,21 @@ nav {
     }
 }
 
-.profile-picture {
-  border-radius: 50%;
-}
-
 .logo {
     font-family: var(--serif);
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    /* gap: 10px; */
+}
+
+.profile-pic {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 nav ul {
