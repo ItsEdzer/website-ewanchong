@@ -20,7 +20,7 @@ elementsToAnimate.forEach(el => observer.observe(el));
 
 
 // Typewriter effect
-const phrases = ["Developer", "UI/UX Designer", "Data Analytics"];
+const phrases = ["Full Stack Developer", "UI/UX Designer", "Data Analyst"];
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
