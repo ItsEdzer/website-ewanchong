@@ -74,6 +74,16 @@ nav ul {
     gap: 0.5rem;
 }
 
+nav ul li a {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    border-radius: 30px;
+    color: var(--color-text);
+    text-decoration: none;
+    font-family: var(--serif);
+    font-size: 1rem;
+}
+
 nav a {
     color: var(--color-text);
     text-decoration: none;
@@ -265,9 +275,8 @@ section {
 
 .project-item {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
-    border-style: solid;
-    border-color: var(--color-secondary);
-    border-radius: 20px;
+    border: 1.5px solid var(--color-border);
+    border-radius: 25px;
 }
 
 .project-item:hover {
@@ -292,6 +301,7 @@ section {
     font-size: 1.5rem;
     color: var(--color-secondary);
     transition: background 0.4s ease;
+    border-radius: 25px;
 }
 
 .project-item:hover .project-image {
