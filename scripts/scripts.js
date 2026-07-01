@@ -47,3 +47,19 @@ function typeEffect() {
 }
 
 typeEffect();
+
+
+
+// Shrink navbar on scroll
+const navbar = document.querySelector('nav');
+
+function handleNavScroll() {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+}
+
+window.addEventListener('scroll', handleNavScroll);
+handleNavScroll(); // run once on load in case page starts scrolled

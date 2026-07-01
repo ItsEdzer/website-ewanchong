@@ -30,7 +30,7 @@ nav {
     left: 50%;
     transform: translateX(-50%);
     width: fit-content;
-    padding: 0.75rem 0.5rem;
+    padding: 1.25rem 1rem;
     display: flex;
     justify-content: center;
     background: var(--color-bg-secondary);
@@ -38,6 +38,12 @@ nav {
     border-radius: 50px;
     z-index: 1000;
     animation: slideDown 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: padding 0.4s ease, top 0.4s ease;
+}
+
+nav.scrolled {
+    top: 1rem;
+    padding: 0.75rem 0.5rem;
 }
 
 @keyframes slideDown {
@@ -81,20 +87,22 @@ nav ul li a {
     color: var(--color-text);
     text-decoration: none;
     font-family: var(--serif);
+    font-size: 1.15rem;
+    transition: padding 0.4s ease, font-size 0.4s ease;
+}
+
+nav.scrolled ul li a {
+    padding: 0.6rem 1.5rem;
     font-size: 1rem;
 }
 
-nav a {
-    color: var(--color-text);
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 400;
-    letter-spacing: 0.5px;
+nav ul li a span {
     position: relative;
+    color: var(--color-text);
     transition: color 0.3s ease;
 }
 
-nav a::after {
+nav ul li a span::after {
     content: '';
     position: absolute;
     bottom: -4px;
@@ -105,11 +113,11 @@ nav a::after {
     transition: width 0.3s ease;
 }
 
-nav a:hover::after {
+nav ul li a:hover span::after {
     width: 100%;
 }
 
-nav a:hover {
+nav ul li a:hover span {
     color: var(--color-accent);
 }
 
@@ -125,7 +133,7 @@ nav a:hover {
 }
 
 .hero-content {
-    max-width: 900px;
+    max-width: 60%;
 }
 
 @keyframes fadeInUp {
