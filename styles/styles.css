@@ -138,6 +138,18 @@ nav a:hover {
     font-weight: 500;
 }
 
+.hero-label::after {
+    content: '|';
+    margin-left: 3px;
+    color: var(--color-accent);
+    animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
 .hero h1 {
     font-family: var(--serif);
     font-size: clamp(3rem, 8vw, 6rem);
@@ -167,18 +179,6 @@ nav a:hover {
     opacity: 0.15;
     filter: blur(60px);
     animation: pulse 4s ease-in-out infinite;
-}
-
-.hero-label::after {
-    content: '|';
-    margin-left: 3px;
-    color: var(--color-accent);
-    animation: blink 0.8s step-end infinite;
-}
-
-@keyframes blink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0; }
 }
 
 
