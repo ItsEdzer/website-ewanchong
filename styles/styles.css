@@ -1,5 +1,6 @@
 :root {
 	--color-bg: #fafaf8;
+    --color-bg-secondary: #ebebeb99;
 	--color-text: #1a1a1a;
 	--color-accent: #3625d2;
 	--color-border: #e0dfd8;
@@ -32,7 +33,7 @@ nav {
     padding: 0.75rem 0.5rem;
     display: flex;
     justify-content: center;
-    background: rgba(200, 200, 200, 0.6);
+    background: var(--color-bg-secondary);
     backdrop-filter: blur(5px);
     border-radius: 50px;
     z-index: 1000;
@@ -50,7 +51,7 @@ nav {
     }
 }
 
-.logo {
+/*.logo {
     font-family: var(--serif);
     font-size: 1.5rem;
     font-weight: 700;
@@ -65,26 +66,12 @@ nav {
   height: 38px;
   border-radius: 50%;
   object-fit: cover;
-}
+} */
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 0.5rem;
-}
-
-nav ul li a {
-    display: inline-block;
-    padding: 0.6rem 1.5rem;
-    border-radius: 30px;
-    color: var(--color-text);
-    text-decoration: none;
-    font-family: var(--serif);
-    font-size: 1rem;
-}
-
-nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.5);
 }
 
 nav a {
@@ -95,6 +82,17 @@ nav a {
     letter-spacing: 0.5px;
     position: relative;
     transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--color-accent);
+    transition: width 0.3s ease;
 }
 
 nav a:hover::after {
@@ -112,7 +110,7 @@ nav a:hover {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 8rem 4rem 4rem;
+    padding: 4rem;
     position: relative;
 }
 
@@ -135,7 +133,7 @@ nav a:hover {
     font-size: 0.9rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--color-secondary);
+    color: var(--color-accent);
     margin-bottom: 1.5rem;
     font-weight: 500;
 }
@@ -177,7 +175,7 @@ nav a:hover {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--color-accent), #d97746);
+    background: linear-gradient(135deg, var(--color-accent), #b7ff3c);
     opacity: 0.15;
     filter: blur(60px);
     animation: pulse 4s ease-in-out infinite;
@@ -267,6 +265,9 @@ section {
 
 .project-item {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-style: solid;
+    border-color: var(--color-secondary);
+    border-radius: 20px;
 }
 
 .project-item:hover {
