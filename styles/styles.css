@@ -41,6 +41,38 @@ nav {
     transition: padding 0.4s ease, top 0.4s ease;
 }
 
+.nav-signature {
+    position: fixed;
+    top: 1.5rem;
+    left: 4rem;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: var(--color-text);
+    text-decoration: none;
+    z-index: 1000;
+    animation: slideDown 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-resume {
+    position: fixed;
+    top: 1.5rem;
+    right: 4rem;
+    padding: 0.85rem 1.75rem;
+    background: var(--color-accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    z-index: 1000;
+    animation: slideDown 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: opacity 0.3s ease;
+}
+
+.nav-resume:hover {
+    opacity: 0.85;
+}
+
 nav.scrolled {
     top: 1rem;
     padding: 0.75rem 0.5rem;
@@ -147,15 +179,15 @@ nav ul li a:hover span {
     object-fit: contain;
     display: block;
     height: auto;
-    max-height: 80%;
+    max-height: 100%;
     width: auto;
-    max-width: 80%
+    max-width: 100%
 }
 
 .hero-content {
     grid-column: 1;
     grid-row: 1;
-    padding: 6rem 4rem 0rem;
+    /*padding: 6rem 4rem;*/
 }
 
 .hero-heading {
@@ -186,19 +218,51 @@ nav ul li a:hover span {
     margin-bottom: 1.5rem;
 }
 
-.hero-email {
-    display: block;
-    color: var(--color-accent);
-    text-decoration: none;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
-}
-
 .hero-footer-right {
     grid-column: 2;
     grid-row: 3;
     justify-self: end;
     align-self: end;
+}
+
+.hero-info-card {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 220px;
+}
+
+.hero-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.hero-info-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-secondary);
+}
+
+.hero-info-value {
+    font-size: 1rem;
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.hero-info-value:hover {
+    color: var(--color-accent);
+}
+
+.hero-info-divider {
+    height: 1px;
+    background: var(--color-border);
 }
 
 @keyframes fadeInUp {
