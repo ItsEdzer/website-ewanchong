@@ -179,7 +179,8 @@ nav ul li a:hover span {
 .hero-footer-left {
     grid-column: 1;
     grid-row: 3;
-    align-self: end;
+    align-self: start;
+    padding-bottom: 4rem;
 }
 
 .hero-email {
@@ -195,6 +196,7 @@ nav ul li a:hover span {
     grid-row: 3;
     justify-self: end;
     align-self: end;
+    padding-bottom: 4rem;
 }
 
 @keyframes fadeInUp {
