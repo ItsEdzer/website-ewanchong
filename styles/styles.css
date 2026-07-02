@@ -145,14 +145,6 @@ nav ul li a:hover span {
     letter-spacing: -1px;
 }
 
-.hero-tagline {
-    grid-column: 2;
-    grid-row: 1;
-    justify-self: end;
-    align-self: start;
-    text-align: right;
-}
-
 .hero-visual {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
@@ -179,8 +171,20 @@ nav ul li a:hover span {
 .hero-footer-left {
     grid-column: 1;
     grid-row: 3;
-    align-self: start;
+    justify-self: start;
+    align-self: end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
     padding-bottom: 4rem;
+}
+
+.hero-tagline {
+    max-width: 280px;
+    color: var(--color-secondary);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .hero-email {
