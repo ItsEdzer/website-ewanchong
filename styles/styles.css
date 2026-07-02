@@ -34,6 +34,7 @@ nav {
     display: flex;
     justify-content: center;
     background: var(--color-bg-secondary);
+    opacity: 0.6;
     backdrop-filter: blur(5px);
     border-radius: 50px;
     z-index: 1000;
@@ -175,8 +176,9 @@ nav ul li a:hover span {
 .hero-portrait {
     position: relative;
     z-index: 2;
-    height: 460px;
+    height: 600px;
     object-fit: contain;
+    display: block;
 }
 
 .hero-footer-left {
@@ -331,6 +333,7 @@ section {
 
 .project-item:hover {
     transform: translateY(-8px);
+    border: 2px solid var(--color-accent);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     animation: float 2s ease-in-out 0.4s infinite;
 }
