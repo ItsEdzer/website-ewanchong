@@ -121,28 +121,12 @@ nav ul li a:hover span {
 .hero {
     background: var(--color-bg-secondary);
     min-height: 100vh;
-    padding: 6rem 4rem 0rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr auto;
     gap: 1rem 2rem;
     position: relative;
     overflow: hidden;
-}
-
-.hero-heading-group {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.hero-heading {
-    grid-column: 1;
-    grid-row: 1;
-    font-family: var(--serif);
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -1px;
 }
 
 .hero-visual {
@@ -163,9 +147,25 @@ nav ul li a:hover span {
     object-fit: contain;
     display: block;
     height: auto;
-    max-height: 100%;
+    max-height: 80%;
     width: auto;
-    max-width: 100%;
+    max-width: 80%
+}
+
+.hero-content {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 6rem 4rem 0rem;
+}
+
+.hero-heading {
+    grid-column: 1;
+    grid-row: 1;
+    font-family: var(--serif);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1px;
 }
 
 .hero-footer-left {
@@ -177,7 +177,6 @@ nav ul li a:hover span {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    padding-bottom: 4rem;
 }
 
 .hero-tagline {
@@ -200,7 +199,6 @@ nav ul li a:hover span {
     grid-row: 3;
     justify-self: end;
     align-self: end;
-    padding-bottom: 4rem;
 }
 
 @keyframes fadeInUp {
