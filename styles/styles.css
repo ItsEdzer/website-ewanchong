@@ -33,8 +33,7 @@ nav {
     padding: 1.75rem 1.5rem;
     display: flex;
     justify-content: center;
-    background: var(--color-bg-secondary);
-    opacity: 0.6;
+    background: rgba(236, 236, 236, 0.6);;
     backdrop-filter: blur(5px);
     border-radius: 50px;
     z-index: 1000;
@@ -134,6 +133,7 @@ nav ul li a:hover span {
     grid-template-rows: auto 1fr auto;
     gap: 1rem 2rem;
     position: relative;
+    overflow: hidden;
 }
 
 .hero-heading-group {
@@ -176,9 +176,12 @@ nav ul li a:hover span {
 .hero-portrait {
     position: relative;
     z-index: 2;
-    height: 600px;
     object-fit: contain;
     display: block;
+    height: auto;
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
 }
 
 .hero-footer-left {
