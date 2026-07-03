@@ -20,7 +20,7 @@ body {
     background: var(--color-bg);
     color: var(--color-text);
     line-height: 1.6;
-    /*overflow-x: hidden;*/
+    overflow-x: hidden;
 }
 
 /* Navigation */
@@ -50,7 +50,7 @@ nav {
     color: var(--color-text);
     text-decoration: none;
     z-index: 1000;
-    animation: slideDown 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: slideDownFade 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .nav-resume {
@@ -65,12 +65,17 @@ nav {
     font-size: 0.95rem;
     font-weight: 500;
     z-index: 1000;
-    animation: slideDown 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: slideDownFade 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     transition: opacity 0.3s ease;
 }
 
 .nav-resume:hover {
     opacity: 0.85;
+}
+
+@keyframes slideDownFade {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 nav.scrolled {
