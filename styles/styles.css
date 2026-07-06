@@ -168,7 +168,7 @@ nav ul li a:hover span {
     object-fit: contain;
     display: block;
     height: auto;
-    max-height: 85%;
+    max-height: 70%;
     width: auto;
     max-width: 100%
 }
