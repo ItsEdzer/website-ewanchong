@@ -42,7 +42,7 @@ nav {
 }
 
 .nav-signature {
-    position: fixed;
+    position: relative;
     top: 1.5rem;
     left: 4rem;
     font-family: 'Dancing Script', cursive;
@@ -54,7 +54,7 @@ nav {
 }
 
 .nav-resume {
-    position: fixed;
+    position: relative;
     top: 1.5rem;
     right: 4rem;
     padding: 0.85rem 1.75rem;
@@ -157,10 +157,9 @@ nav ul li a:hover span {
     inset: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     z-index: 0;
     pointer-events: none;
-    padding-bottom: 0rem;
 }
 
 .hero-portrait {
