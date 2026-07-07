@@ -20,3 +20,47 @@ if (!prefersReducedMotion) {
 
     elementsToAnimate.forEach(el => observer.observe(el));
 }
+
+
+
+// Typewriter effect
+const phrases = ["Full Stack Developer", "UI/UX Designer", "Data Analyst"];
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typewriterEl = document.getElementById('typewriter');
+
+function typeEffect() {
+    const currentPhrase = phrases[phraseIndex];
+
+    charIndex += isDeleting ? -1 : 1;
+    typewriterEl.textContent = currentPhrase.substring(0, charIndex);
+
+    let typeSpeed = isDeleting ? 50 : 100;
+
+    if (!isDeleting && charIndex === currentPhrase.length) {
+        typeSpeed = 1500; // pause when fully typed
+        isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        typeSpeed = 300; // pause before typing next word
+    }
+
+    setTimeout(typeEffect, typeSpeed);
+}
+
+typeEffect();
+
+
+
+// Shrink navbar on scroll
+const navbar = document.querySelector('nav');
+
+function handleNavScroll() {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+}
