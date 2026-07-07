@@ -415,6 +415,12 @@ section {
     animation: float 2s ease-in-out 0.4s infinite;
 }
 
+.project-item.animate {
+    transition: opacity var(--anim-duration, 1.4s) cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
 @keyframes float {
     0%, 100% { transform: translateY(-8px); }
     50% { transform: translateY(-14px); }

@@ -64,3 +64,6 @@ function handleNavScroll() {
         navbar.classList.remove('scrolled');
     }
 }
+
+window.addEventListener('scroll', handleNavScroll);
+handleNavScroll(); // run once on load in case page starts scrolled
