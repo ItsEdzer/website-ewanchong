@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact | Ewan Chong</title>
+	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700			&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<!-- Navigation Bar -->
+    <a href="index.html" class="nav-signature">Ewan</a>
+	<nav>
+		<ul>
+            <li><a href="index.html"><span>Home</span></a></li>
+            <li><a href="projects.html"><span>Project</span></a></li>
+            <li><a href="contact.html" class="active"><span>Contact</span></a></li>
+        </ul>
+	</nav>
+    <a href="#resume" class="nav-resume">Resume</a>
+
+	<!-- Page Header -->
+	<section class="page-header">
+        <div class="page-header-content" style="--anim-delay: 0.1s;">
+            <div class="section-label">Get In Touch</div>
+            <h1 class="page-title">Let's Work Together</h1>
+            <p class="page-subtitle">I'm always interested in hearing about new projects and opportunities.</p>
+        </div>
+	</section>
+
+	<!-- Contact Section -->
+	<section id="contact" class="contact-section">
+        <div class="contact-wrapper" style="--anim-delay: 0.15s;">
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+                </div>
+
+                <button type="submit" class="form-submit">Send Message</button>
+                <p id="form-status" class="form-status"></p>
+            </form>
+
+            <div class="contact-alt">
+                <p>Prefer email directly?</p>
+                <a href="mailto:ewancxj@gmail.com" class="contact-email">ewancxj@gmail.com</a>
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/xin-jie-chong" class="social-link">LinkedIn</a>
+                    <a href="https://x.com/_Edzer_" class="social-link">Twitter</a>
+                    <a href="https://www.instagram.com/xinnjiee_/?hl=en" class="social-link">Instagram</a>
+                    <a href="https://github.com/ItsEdzer" class="social-link">GitHub</a>
+                </div>
+            </div>
+        </div>
+	</section>
+
+	<!-- Footer -->
+	<footer>
+		<p>&copy; 2026 Ewan Chong. Built with HTML, CSS, JavaScript. All rights reserved.</p>
+	</footer>
+
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>
