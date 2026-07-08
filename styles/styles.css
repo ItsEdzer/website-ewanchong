@@ -433,6 +433,42 @@ section {
     padding-top: 4rem;
 }
 
+.project-view-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.view-more-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.9rem 2rem;
+    border: 1.5px solid var(--color-border);
+    border-radius: 30px;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.view-more-link svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+.view-more-link:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    transform: translateX(4px);
+}
+
+.view-more-link:hover svg {
+    transform: translateX(3px);
+}
+
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

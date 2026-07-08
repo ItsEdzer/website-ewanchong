@@ -1,6 +1,6 @@
 // Select all the elements you want to animate
 const elementsToAnimate = document.querySelectorAll(
-    '.hero-content, .hero-footer-right, .section-header, .page-header-content, .project-item, .skill-tag, .contact-wrapper'
+    '.hero-content, .hero-footer-right, .section-header, .page-header-content, .project-item, .skill-tag, .contact-wrapper, .project-view-more'
 );
 
 // Respect users who've asked for reduced motion
